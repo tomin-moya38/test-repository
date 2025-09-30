@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --bg-gradient-start: #0b172a;
+  --bg-gradient-end: #101d32;
+  --accent: #8ab4ff;
+  --accent-strong: #aecbfa;
+  --text-primary: #e8eaed;
+  --text-secondary: #c0c7d0;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --chip-bg: rgba(138, 180, 255, 0.1);
+  --chip-border: rgba(138, 180, 255, 0.4);
+}
+
+html,
+body,
+[data-testid="stAppViewContainer"] {
+  font-family: 'Google Sans', 'Roboto', sans-serif;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.1), transparent 55%),
+    linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  color: var(--text-primary);
+}
+
+main.block-container {
+  padding: 0 4rem 4rem 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Google Sans', 'Roboto', sans-serif;
+  color: var(--text-primary);
+}
+
+.gemini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 2rem 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.gemini-logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.gemini-pill {
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: rgba(138, 180, 255, 0.15);
+  color: var(--accent-strong);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.gemini-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(76, 201, 240, 0.2), rgba(67, 97, 238, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  margin-bottom: 2rem;
+}
+
+.gemini-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gemini-hero p {
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.hero-badge {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 500;
+}
+
+.suggestion-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.suggestion-chip {
+  padding: 0.85rem 1.2rem;
+  border-radius: 1rem;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--text-primary);
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.suggestion-chip:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.chat-wrapper {
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+button[kind="secondary"] {
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+.stButton button {
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(138, 180, 255, 0.4), rgba(52, 168, 83, 0.45));
+  color: #0b172a;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 1.2rem;
+}
+
+.stButton button:hover {
+  filter: brightness(1.1);
+}
+
+[data-testid="stSidebar"] {
+  background: rgba(11, 23, 42, 0.9);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-testid="stSidebar"] * {
+  color: var(--text-primary) !important;
+}
+
+[data-testid="stSidebar"] .stTextInput > div > div > input {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+[data-testid="stChatMessage"] {
+  background: transparent;
+}
+
+[data-testid="stChatMessage"] > div {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+[data-testid="stChatInput"] textarea {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(11, 23, 42, 0.9);
+  color: var(--text-primary);
+  padding: 1rem 1.2rem;
+  min-height: 100px;
+}
+
+[data-testid="stChatInput"] button {
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(138, 180, 255, 0.8), rgba(52, 168, 83, 0.7));
+  color: #0b172a;
+  font-weight: 600;
+}
+
+[data-testid="stToolbar"] {
+  display: none;
+}
+
+.stMarkdown a {
+  color: var(--accent);
+}
+
+.stMarkdown code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.35rem;
+}
+
+.stMarkdown pre {
+  background: rgba(11, 23, 42, 0.8) !important;
+  border-radius: 1rem !important;
+}
